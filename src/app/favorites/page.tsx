@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Property } from '@/types';
 import { PropertyService } from '@/services/propertyService';
 import PropertyCard from '@/components/properties/PropertyCard';
@@ -118,12 +119,12 @@ export default function FavoritesPage() {
                             <p className="text-gray-600 mb-8">
                                 Ajoutez des propriétés à vos favoris en cliquant sur le cœur lors de vos recherches.
                             </p>
-                            <a
+                            <Link
                                 href="/properties"
                                 className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                             >
                                 Découvrir les propriétés
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 ) : (
@@ -158,12 +159,12 @@ export default function FavoritesPage() {
                         <p className="text-gray-600 mb-6">
                             Basé sur vos préférences et vos propriétés favorites
                         </p>
-                        <a
+                        <Link
                             href="/properties"
                             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                         >
                             Voir les suggestions
-                        </a>
+                        </Link>
                     </div>
                 )}
             </div>
